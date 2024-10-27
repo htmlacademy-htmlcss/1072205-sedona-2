@@ -10,7 +10,7 @@
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img class="navigation-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта о городе Седона">
+            <img class="navigation-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта о городе Седона"/>
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -25,14 +25,14 @@
           </ul>
           <ul class="navigation-user">
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#">
+              <a class="navigation-user-link navigation-user-link-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link" href="#">
+              <a class="navigation-user-link navigation-user-link-favourites" href="#">
                 <span class="visually-hidden">Избраннное</span>
-                <span class="navigation-user-link-favourites">12</span>
+                <span class="navigation-user-link-favourites-number">12</span>
               </a>
             </li>
             <li class="navigation-user-item">
@@ -55,55 +55,55 @@
             </li>
           </ol>
           <form class="filters-form" action="https://echo.htmlacademy.ru/courses" method="get">
-            <div class="filters-form-column-left">
-              <fieldset class="filters-form-group">
-                <legend class="filters-form-title">Инфраструктура:</legend>
-                <ul class="filters-form-list">
-                  <li class="filters-form-item">
-                    <input class="filters-checkbox" type="checkbox" name="pool" id="checkbox-pool" checked>
-                    <label for="checkbox-pool">Бассейн</label>
-                  </li>
-                  <li class="filters-form-item">
-                    <input class="filters-checkbox" type="checkbox" name="parking" id="checkbox-parking" checked>
-                    <label for="checkbox-parking">Парковка</label>
-                  </li>
-                  <li class="filters-form-item">
-                    <input class="filters-checkbox" type="checkbox" name="wifi" id="checkbox-wifi">
-                    <label for="checkbox-wifi">Wi-Fi</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filters-form-group">
-                <legend class="filters-form-title">Тип Жилья:</legend>
-                <ul class="filters-form-list">
-                  <li class="filters-form-item">
-                    <input class="filters-radio" type="radio" name="house-type" value="hotel" id="radio-hotel" checked>
-                    <label for="radio-hotel">Гостиница</label>
-                  </li>
-                  <li class="filters-form-item">
-                    <input class="filters-radio" type="radio" name="house-type" value="motel" id="radio-motel">
-                    <label for="radio-motel">Мотель</label>
-                  </li>
-                  <li class="filters-form-item">
-                    <input class="filters-radio" type="radio" name="house-type" value="apartment" id="radio-apartment">
-                    <label for="radio-apartment">Апартаменты</label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
-            <div class="filters-form-column-right">
-              <fieldset class="filters-form-group">
-                <legend class="filters-form-title">Стоимость, ₽:</legend>
+            <fieldset class="filters-form-group filters-form-group-checkbox">
+              <legend class="filters-form-title">Инфраструктура:</legend>
+              <ul class="filters-form-list">
+                <li class="filters-form-item">
+                  <input class="filters-checkbox" type="checkbox" name="pool" id="checkbox-pool" checked>
+                  <label for="checkbox-pool">Бассейн</label>
+                </li>
+                <li class="filters-form-item">
+                  <input class="filters-checkbox" type="checkbox" name="parking" id="checkbox-parking" checked>
+                  <label for="checkbox-parking">Парковка</label>
+                </li>
+                <li class="filters-form-item">
+                  <input class="filters-checkbox" type="checkbox" name="wifi" id="checkbox-wifi">
+                  <label for="checkbox-wifi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filters-form-group filters-form-group-radio">
+              <legend class="filters-form-title">Тип Жилья:</legend>
+              <ul class="filters-form-list">
+                <li class="filters-form-item">
+                  <input class="filters-radio" type="radio" name="house-type" value="hotel" id="radio-hotel" checked>
+                  <label for="radio-hotel">Гостиница</label>
+                </li>
+                <li class="filters-form-item">
+                  <input class="filters-radio" type="radio" name="house-type" value="motel" id="radio-motel">
+                  <label for="radio-motel">Мотель</label>
+                </li>
+                <li class="filters-form-item">
+                  <input class="filters-radio" type="radio" name="house-type" value="apartment" id="radio-apartment">
+                  <label for="radio-apartment">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filters-form-group filters-form-group-cost">
+              <legend class="filters-form-title">Стоимость, ₽:</legend>
+              <label>
                 <span>от</span>
                 <input type="number" value="0">
+              </label>
+              <label>
                 <span>до</span>
                 <input type="number" value="9000">
-                <input type="range" min="0" max="9000" step="100" value="9000">
-              </fieldset>
-              <div class="filters-form-group-buttons">
-                <button class="form-button-submit button button-small button-light" type="submit">Применить</button>
-                <button class="form-button-reset button button-small" type="reset">Сбросить</button>
-              </div>
+              </label>
+              <input type="range" min="0" max="9000" step="100" value="9000">
+            </fieldset>
+            <div class="filters-form-group-buttons">
+              <button class="form-button-submit button button-small button-light" type="submit">Применить</button>
+              <button class="form-button-reset button button-small" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -207,26 +207,26 @@
       <footer class="page-footer">
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link" href="https://vk.com/htmlacademy">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://t.me/htmlacademy">
+            <a class="social-link social-link-telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
         <address class="footer-contacts">
-          <a class="contact-link" href="tel:78128121212">+7 (812) 812-12-12</a>
+          <a class="contact-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <a class="developer-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy" src="images/developer-logo.svg" width="115" height="33" alt="Сайт разработчика сайта Седона - HTML Academy">
+          <img class="developer-image" src="images/developer-logo.svg" width="115" height="33" alt="Сайт разработчика сайта Седона - HTML Academy"/>
         </a>
       </footer>
     </div>
