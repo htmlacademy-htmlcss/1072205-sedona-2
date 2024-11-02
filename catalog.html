@@ -10,12 +10,12 @@
       <header class="page-header">
         <div class="page-header-wrapper wrapper">
           <nav class="navigation">
-            <a class="navigation-logo">
+            <a class="navigation-logo" href="index.html">
               <img class="navigation-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта о городе Седона"/>
             </a>
             <ul class="navigation-list">
               <li class="navigation-item">
-                <a class="navigation-link"  href="index.html" >Главная</a>
+                <a class="navigation-link" href="index.html">Главная</a>
               </li>
               <li class="navigation-item">
                 <a class="navigation-link" href="#">О Седоне</a>
@@ -27,11 +27,17 @@
             <ul class="navigation-user">
               <li class="navigation-user-item">
                 <a class="navigation-user-link navigation-user-link-search" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
+                  </svg>
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="navigation-user-item">
                 <a class="navigation-user-link navigation-user-link-favourites" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="currentColor">
+                    <path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+                  </svg>
                   <span class="visually-hidden">Избраннное</span>
                   <span class="navigation-user-link-favourites-number">12</span>
                 </a>
@@ -61,16 +67,24 @@
               <legend class="filters-form-title">Инфраструктура:</legend>
               <ul class="filters-form-list">
                 <li class="filters-form-item">
-                  <input class="filters-checkbox" type="checkbox" name="pool" id="checkbox-pool" checked>
-                  <label for="checkbox-pool">Бассейн</label>
+                  <label>
+                    <span class="filters-form-label">Бассейн</span>
+                    <input class="visually-hidden filters-checkbox" type="checkbox" name="pool" checked>
+                    <span class="filters-form-mark"></span>
+                  </label>
                 </li>
                 <li class="filters-form-item">
-                  <input class="filters-checkbox" type="checkbox" name="parking" id="checkbox-parking" checked>
-                  <label for="checkbox-parking">Парковка</label>
+                  <label>
+                    <span class="filters-form-label">Парковка</span>
+                    <input class="visually-hidden filters-checkbox" type="checkbox" name="parking" checked>
+                    <span class="filters-form-mark"></span>
+                  </label>
                 </li>
                 <li class="filters-form-item">
-                  <input class="filters-checkbox" type="checkbox" name="wifi" id="checkbox-wifi">
-                  <label for="checkbox-wifi">Wi-Fi</label>
+                  <label>
+                    <span class="filters-form-label">Wi-Fi</span>
+                    <input class="visually-hidden filters-checkbox" type="checkbox" name="wifi">
+                    <span class="filters-form-mark"></span>                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -78,16 +92,25 @@
               <legend class="filters-form-title">Тип Жилья:</legend>
               <ul class="filters-form-list">
                 <li class="filters-form-item">
-                  <input class="filters-radio" type="radio" name="house-type" value="hotel" id="radio-hotel" checked>
-                  <label for="radio-hotel">Гостиница</label>
+                  <label>
+                    <span class="filters-form-label">Гостиница</span>
+                    <input class="visually-hidden filters-radio" type="radio" name="house-type" value="hotel" checked>
+                    <span class="filters-form-mark"></span>
+                  </label>
                 </li>
                 <li class="filters-form-item">
-                  <input class="filters-radio" type="radio" name="house-type" value="motel" id="radio-motel">
-                  <label for="radio-motel">Мотель</label>
+                  <label>
+                    <span class="filters-form-label">Мотель</span>
+                    <input class="visually-hidden filters-radio" type="radio" name="house-type" value="motel">
+                    <span class="filters-form-mark"></span>
+                  </label>
                 </li>
                 <li class="filters-form-item">
-                  <input class="filters-radio" type="radio" name="house-type" value="apartment" id="radio-apartment">
-                  <label for="radio-apartment">Апартаменты</label>
+                  <label>
+                    <span class="filters-form-label">Апартаменты</span>
+                    <input class="visually-hidden filters-radio" type="radio" name="house-type" value="apartment">
+                    <span class="filters-form-mark"></span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -101,7 +124,17 @@
                 <span>до</span>
                 <input type="number" value="9000">
               </label>
-              <input type="range" min="0" max="9000" step="100" value="9000">
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 5px; width: 200px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
             </fieldset>
             <div class="filters-form-group-buttons">
               <button class="form-button-submit button button-small button-light" type="submit">Применить</button>
