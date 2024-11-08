@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Дарья Руксова](https://up.htmlacademy.ru/htmlcss-individual/2/user/1072205).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Шестерина](https://htmlacademy.ru/profile/id221124).
+* Сайт: [Проект Седона](https://furidasha.github.io/1072205-sedona-2/).
 
 ---
 
