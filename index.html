@@ -10,10 +10,10 @@
   <body>
     <div class="page-container">
       <header class="page-header" data-test="header">
-        <div class="page-header-wrapper">
+        <div class="wrapper">
           <nav class="navigation">
             <a class="navigation-logo">
-              <img class="navigation-logo-image" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта о городе Седона">
+              <img class="navigation-logo-image" src="images/logo.svg" width="140" height="70" alt="Логотип сайта о городе Седона">
             </a>
             <ul class="navigation-list">
               <li class="navigation-item">
@@ -64,32 +64,32 @@
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-with-image">
               <div class="advantages-card">
-                <h3>Настоящий городок</h3>
+                <h3 class="advantages-item-title">Настоящий городок</h3>
                 <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages-item-image" src="images/advantage-1.jpg" width="800" height="385" alt="Улица города Седона">
             </li>
             <li class="advantages-item advantages-item-lighter">
               <div class="advantages-card">
-                <h3>Небольшая площадь</h3>
+                <h3 class="advantages-item-title">Небольшая площадь</h3>
                 <p>Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-darker">
               <div class="advantages-card">
-                <h3>Красивая дорога</h3>
+                <h3 class="advantages-item-title">Красивая дорога</h3>
                 <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-lighter">
               <div class="advantages-card">
-                <h3>Мало туристов</h3>
+                <h3 class="advantages-item-title">Мало туристов</h3>
                 <p>Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-with-image advantages-item-with-image-first">
               <div class="advantages-card">
-                <h3>Там есть мост дьявола</h3>
+                <h3 class="advantages-item-title">Там есть мост дьявола</h3>
                 <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-item-image" src="images/advantage-2.jpg" width="800" height="385" alt="Мост дьявола">
@@ -98,20 +98,21 @@
         </section>
         <section class="services" data-test="service">
           <div class="services-intro section-intro">
-            <h2 class="services-title section-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+            <h2 class="visually-hidden">Услуги</h2>
+            <p class="services-title section-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
             <p class="services-text section-text">Опытный персонал и качественное обслуживание!</p>
           </div>
           <ul class="services-list">
-            <li class="services-item">
-              <h3>Жильё</h3>
+            <li class="services-item services-item-house">
+              <h3 class="services-item-title">Жильё</h3>
               <p>Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
             </li>
-            <li class="services-item">
-              <h3>Еда</h3>
+            <li class="services-item services-item-food">
+              <h3 class="services-item-title">Еда</h3>
               <p>Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="services-item">
-              <h3>Сувениры</h3>
+            <li class="services-item services-item-souvenirs">
+              <h3 class="services-item-title">Сувениры</h3>
               <p>Не только китайского,<br>но и настоящего местного производства!</p>
             </li>
           </ul>
@@ -119,8 +120,8 @@
         <section class="search" data-test="search">
           <div class="search-intro section-intro">
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-            <p class="search-title section-title">Заинтересовались?</p>
-            <p class="search-text section-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="section-title">Заинтересовались?</p>
+            <p class="section-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </div>
           <button class="search-button button button-big button-dark" type="button">Поиск гостиницы в Седоне</button>
         </section>
@@ -137,7 +138,7 @@
         </section>
       </main>
       <footer class="page-footer" data-test="footer">
-        <div class="page-footer-wrapper">
+        <div class="page-footer-wrapper wrapper">
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
@@ -187,17 +188,21 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="search-form-group search-form-dates">
-              <label class="search-form-label">Дата заезда:</label>
-              <input class="search-form-input form-input" type="text" name="check-in" value="27 апреля 2020" placeholder="Укажите дату" required>
-              <span class="search-form-dates-message search-form-message-warning">Мы не можем отправить вас в прошлое.</span>
+              <label class="search-form-label" for="search-form-check-in">Дата заезда:</label>
+              <div class="search-wrapper">
+                <input class="search-form-input form-input" type="text" name="check-in" id="search-form-check-in" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <span class="search-form-dates-message search-form-message-warning">Мы не можем отправить вас в прошлое.</span>
+              </div>
             </div>
             <div class="search-form-group search-form-dates">
-              <label class="search-form-label">Дата выезда:</label>
-              <input class="search-form-input form-input" type="text" name="check-out" value="1 сентября 2023" placeholder="Укажите дату" required>
-              <span class="search-form-dates-message">На эти даты есть свободные номера. Пока есть.</span>
+              <label class="search-form-label" for="search-form-check-out">Дата выезда:</label>
+              <div class="search-wrapper">
+                <input class="search-form-input form-input" type="text" name="check-out" id="search-form-check-out" value="1 сентября 2023" placeholder="Укажите дату" required>
+                <span class="search-form-dates-message">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
             </div>
             <div class="search-form-group search-form-group-number search-form-adults">
-              <label class="search-form-label"  for="adults-number">Взрослые:</label>
+              <label class="search-form-label"  for="search-form-adults">Взрослые:</label>
               <span  class="search-form-input-with-control">
                 <button class="search-form-control-button search-form-control-minus" type="button">
                   <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +210,7 @@
                   </svg>
                   <span class="visually-hidden">Минус</span>
                 </button>
-                <input class="search-form-input form-input" type="number" name="adults" id="adults-number" value="2" min="0" required>
+                <input class="search-form-input form-input" type="number" name="adults" id="search-form-adults" value="2" min="0" required>
                 <button class="search-form-control-button search-form-control-plus" type="button">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
@@ -215,7 +220,7 @@
               </span>
             </div>
             <div class="search-form-group search-form-group-number search-form-kids">
-              <label class="search-form-label" for="kids-number">Дети:
+              <label class="search-form-label" for="search-form-kids">Дети:
                 <span class="search-form-tooltip">
                   <span class="search-form-tooltip-toggle" aria-labelledby="search-form-tooltip-label" tabindex="0">
                     <svg class="search-form-tooltip-icon" width="2" height="12" viewBox="0 0 2 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -232,7 +237,7 @@
                   </svg>
                   <span class="visually-hidden">Минус</span>
                 </button>
-                <input class="search-form-input form-input" type="number" name="kids" id="kids-number" value="2" min="0" required>
+                <input class="search-form-input form-input" type="number" name="kids" id="search-form-kids" value="2" min="0" required>
                 <button class="search-form-control-button search-form-control-plus" type="button">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/>
